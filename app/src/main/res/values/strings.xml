@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GitHubUsers</string>
+    <string name="details">Details</string>
+    <string name="searchBarHint">Enter username or notes…</string>
+    <string name="go_back">Go back</string>
+    <string name="user_avatar">User avatar</string>
+    <string name="profile_followers">Followers: %s</string>
+    <string name="profile_following">Following: %s</string>
+    <string name="notes">Notes:</string>
+    <string name="save">Save</string>
+    <string name="profile_name">Name: %s (Twitter: %s)</string>
+    <string name="profile_company">Company: %s</string>
+    <string name="profile_blog">Blog: %s</string>
+    <string name="profile_location">Location: %s</string>
+    <string name="profile_created_at">Created at: %s</string>
+    <string name="notesEditTextHint">Write your notes here…</string>
+    <string name="not_specified">Not specified</string>
+    <string name="internet_connection_is_lost">Internet connection is lost</string>
+</resources>

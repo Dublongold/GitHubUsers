@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/goToUsers"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#00000000"
+        android:contentDescription="@string/go_back"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/profileSeparator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/go_back_button_white" />
+
+    <TextView
+        android:id="@+id/userProfileLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/usernameTitleTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/profileSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+
+    <View
+        android:id="@+id/profileSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/simple_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToUsers" />
+
+    <ImageView
+        android:id="@+id/userProfileAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:contentDescription="@string/user_avatar"
+        android:padding="5dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/profileSeparator"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <View
+        android:id="@+id/profileSecondSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/simple_border"
+        android:padding="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileAvatar" />
+
+    <TextView
+        android:id="@+id/profileFollowers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/profileSpace"
+        app:layout_constraintEnd_toStartOf="@+id/profileSpace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileSpace"
+        tools:text="Followers: 1023" />
+
+    <Space
+        android:id="@+id/profileSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileSecondSeparator" />
+
+    <TextView
+        android:id="@+id/profileFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/profileSpace"
+        app:layout_constraintStart_toEndOf="@id/profileSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileSpace"
+        tools:text="Following: 1256" />
+
+    <LinearLayout
+        android:id="@+id/userProfileData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/profileHorizontalMargin"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/profileHorizontalMargin"
+        android:background="@drawable/simple_border"
+        android:orientation="vertical"
+        android:padding="7dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileSpace">
+
+        <TextView
+            android:id="@+id/profileUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Name: Name (Twitter: username)" />
+
+        <TextView
+            android:id="@+id/profileUserCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Company: Company"
+            android:layout_marginTop="@dimen/marginBetweenUserData"
+            android:layout_marginBottom="@dimen/marginBetweenUserData"/>
+
+        <TextView
+            android:id="@+id/profileUserBlog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Blog: Blog" />
+
+        <TextView
+            android:id="@+id/profileUserLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Location: Location"
+            android:layout_marginTop="@dimen/marginBetweenUserData"
+            android:layout_marginBottom="@dimen/marginBetweenUserData"/>
+
+        <TextView
+            android:id="@+id/profileUserCreatedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Created at: 00:00:00:00" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notes"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/notesEditText"
+        app:layout_constraintStart_toStartOf="@+id/notesEditText" />
+
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/profileHorizontalMargin"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/profileHorizontalMargin"
+        android:padding="5dp"
+        android:gravity="top"
+        android:autofillHints="User notes"
+        android:background="@drawable/simple_border"
+        android:ems="10"
+        android:hint="@string/notesEditTextHint"
+        android:inputType="textMultiLine"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userProfileData" />
+
+    <Button
+        android:id="@+id/saveNotesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notesEditText" />
+
+    <ProgressBar
+        android:id="@+id/profileProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileSeparator" />
+
+    <ImageView
+        android:id="@+id/connectionLostIconInProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/connection_lost" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
